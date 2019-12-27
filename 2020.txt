@@ -1,0 +1,73 @@
+<?php
+if(substr($validity,-1) == "d"){
+  $validity = "   <br>MASA AKTIF : ".substr($validity,0,-1)." HARI";
+}else if(substr($validity,-1) == "h"){
+  $validity = "MASA AKTIF : ".substr($validity,0,-1)."Jam";
+}
+if(substr($timelimit,-1) == "d" & strlen($timelimit) >3){
+  $timelimit = "Durasi:".((substr($timelimit,0,-1)*7) +  substr($timelimit, 2,1))." HARI";
+}else if(substr($timelimit,-1) == "d"){
+  $timelimit = "Durasi:".substr($timelimit,0,-1)." HARI";
+}else if(substr($timelimit,-1) == "h"){
+  $timelimit = "Durasi:".substr($timelimit,0,-1)."Jam";
+}else if(substr($timelimit,-1) == "w"){
+  $timelimit = "Durasi:".(substr($timelimit,0,-1)*7)." HARI";
+}
+if($getprice == "3000"){ $color = "#880000";} 
+elseif($getprice == "1000"){ $color = "#752CEB";}
+elseif($getprice == "2000"){ $color = "#13C013";}
+elseif($getprice == "3000"){ $color = "#880000";}
+elseif($getprice == "4000"){ $color = "#F75418";}
+elseif($getprice == "5000"){ $color = "#1433FD";}
+elseif($getprice == "8000"){ $color = "#663399";}
+elseif($getprice == "10000"){ $color = "#663399";}
+elseif($getprice == "13000"){ $color = "#2E8B57";}
+elseif($getprice == "15000"){ $color = "#2E8B57";}
+elseif($getprice == "17000"){ $color = "#0000FF";}
+elseif($getprice == "20000"){ $color = "#0000FF";}
+elseif($getprice == "35000"){ $color = "#6495ED";} 
+elseif($getprice == "40000"){ $color = "#6495ED";} 
+elseif($getprice == "80000"){ $color = "#FF8C00";}
+elseif($getprice == "85000"){ $color = "#FF8C00";}
+elseif($getprice == "160000"){ $color = "#DC143C";} 
+elseif($getprice == "100000"){ $color = "#DC143C";} 
+else{ $color = "#FF69B4";}?>  
+ <!--mks-mulai-->
+
+
+                                                       
+<table class=" voucher" style="border: 1px <?php echo $color ?> solid;border-radius: 3px; solid  width: 215px; height:141px; background: url('https://isbernendi.github.io/thumber/images/2020.png') no-repeat; background-size:contain;";}>	 
+	 
+	 
+<tbody>
+ <tr>  
+   <td> 
+<div style="font-weight:bold;font-weight:bold;margin-top: 5px;margin-left:135px;font-size:18px;padding-left:17px;color:<?php echo $color ?> ">
+<small style="font-size:13px;margin-left:-25px;position:absolute;">Rp.</small><?php echo $getprice;?>
+</div>	   
+<div>
+	<?php if($usermode == "vc"){?>    
+   <div style="text-align:left;margin-top: 8px; margin-left:5px;">
+	<b style="text-align:left;font-size:10px;color:#333;">  kode aktivasi<br>
+   <b style="border: 1px <?php echo $color ?> solid; border-radius:3px; solid  #444;background:<?php echo $color ?>;text-align:left;font-size:10px;color:#fff ;"><?= $username ?> 
+		</b>   
+</div>	
+<?php }elseif($usermode == "up"){?>	   
+   <div style="margin-top: 8px; margin-left:5px;">
+	<b style="text-align:left;font-size:10px;color:#333;">kode aktivasi <br>   
+   <b style="border: 1px <?php echo $color ?> solid; border-radius:3px; solid  #444;background:<?php echo $color ?>;text-align:left;font-size:10px;color:#fff;">U : <?= $username ?> - P : <?= $password; ?></b><?php }?>	
+   </div> 
+	<br>   
+<div style="color:#333; margin-top: -20px; margin-left:5px;">
+   <b style="font-size:9px"><?= $validity; ?><br><?= $timelimit; ?><br>Login/logout : <?= $dnsname; ?>
+<div style="margin-top: -60px; margin-left:135px;">
+  <img style="border: 1px <?php echo $color ?> solid; border-radius:4px; solid  #444;width:60px;height:60px;"  <?= $qrcode ?> 
+	</div>
+<div style="border: 1px <?php echo $color ?> solid; border-radius: 3px; solid  #444;background:<?php echo $color ?>;color:#fff; margin-top: 14px; margin-left:-5px;">
+   <b style="font-size:9px"><b><?= $hotspotname; ?><span id="num"><?= " [$num]"; ?></b> 
+  </div> 	   
+
+</td>
+   </tr>
+   </tbody>
+   </table>		
