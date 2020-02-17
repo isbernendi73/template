@@ -33,7 +33,7 @@ elseif($getprice == "160000"){ $color = "#DC143C";}
 elseif($getprice == "170000"){ $color = "#DC143C";} 
 else{ $color = "#FF69B4";}?>  
 <!--mks-mulai-->
-<table class="voucher" style="background:#F8F8FF;margin: 1px;border: 1px solid <?php echo $color ?>; border-radius: 5px;width: 88px;">
+<table class="voucher" style="background:#FFF;margin: 1px;border: 1px solid <?php echo $color ?>; border-radius: 5px;width: 88px;">
 <tbody>
 <tr>
 <td style="text-align: center; ">
