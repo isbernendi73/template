@@ -6,7 +6,7 @@
 </tr>
 <tr>
 <td>
-<table style=" text-align: center; width: 40px;">
+<table style=" text-align: center; width: 45px;">
 <tbody>
 <td>
 <?php if($usermode == "vc"){?>
