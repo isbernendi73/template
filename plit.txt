@@ -1,0 +1,43 @@
+<!--mks-mulai--> 
+<table class="voucher" style="border: 1px solid black;padding:0px;margin: -0px; border-radius: 2px;width: 48px;">
+<tbody>
+<tr>
+<td style="text-align: center; ">
+</tr>
+<tr>
+<td>
+<table style=" text-align: center; width: 40px;">
+<tbody>
+<td>
+<?php if($usermode == "vc"){?>
+<tr>
+<tr style="color: black;text-align: center; font-size: 8px; ">
+<p style=" margin-top:-15px;margin-bottom:5px">
+<td ><?= $price; ?></td>
+</tr>
+<tr style="color: black; font-size: 7px; ">
+<td style="margin-top:-15px;text-align: center;"><?php echo $username;?></td>
+</tr>
+<?php }elseif($usermode == "up"){?>
+<tr>
+<tr style="color: black;text-align: center; font-size: 8px; ">
+<p style=" margin-top:-15px;margin-bottom:5px">
+<td ><?= $price; ?></td>
+</tr>
+<tr style="color: black; font-size: 7px; ">
+<td style="margin-top:-15px; text-align: center;">U: <?php echo $username;?><br>
+P: <?= $password; ?></td>
+</tr>
+<?php }?>
+</td>
+</tr>
+</table>
+  </td>
+</tr>
+</tbody>
+</table>
+ </td>
+</tr>
+</tbody>
+</table>
+<!--mks-akhir-->	
